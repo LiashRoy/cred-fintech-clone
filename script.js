@@ -254,8 +254,22 @@ window.addEventListener('load', () => {
   });
 });
 
-// ─── 12. TYPING EFFECT FOR HERO SUBTITLE ──────────
-// Already handled by CSS animation — clean!
+// ─── 13. MOBILE TOOLTIP TOGGLE ──────────────────────
+const appProfile = document.querySelector('.app-profile');
+if (appProfile) {
+  appProfile.addEventListener('click', (e) => {
+    // Only apply toggle logic on mobile/touch screens
+    if (window.innerWidth <= 768) {
+      appProfile.classList.toggle('active-tooltip');
+    }
+  });
+  // Click outside to close
+  document.addEventListener('click', (e) => {
+    if (window.innerWidth <= 768 && !appProfile.contains(e.target)) {
+      appProfile.classList.remove('active-tooltip');
+    }
+  });
+}
 
 console.log(
   '%c CRED — Global Fintech Encyclopedia %c Built for PGDM Fintech Course ',

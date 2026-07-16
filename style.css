@@ -442,7 +442,8 @@ a { text-decoration: none; color: inherit; }
   transform: translateY(-50%) rotate(45deg);
 }
 
-.app-profile:hover .profile-tooltip {
+.app-profile:hover .profile-tooltip,
+.app-profile.active-tooltip .profile-tooltip {
   opacity: 1;
   visibility: visible;
   transform: translate(0, -50%);
@@ -1592,7 +1593,8 @@ cite {
     border-left: 1px solid var(--manna-dim);
     transform: rotate(45deg);
   }
-  .app-profile:hover .profile-tooltip {
+  .app-profile:hover .profile-tooltip,
+  .app-profile.active-tooltip .profile-tooltip {
     transform: translateY(0);
   }
 
