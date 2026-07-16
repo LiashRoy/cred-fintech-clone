@@ -1613,9 +1613,18 @@ cite {
   .bm-flow-arrow { transform: rotate(90deg); margin: 1rem 0; }
   .delta4-card { flex-direction: column; text-align: center; }
   .footer-inner { flex-direction: column; text-align: center; }
-  .pe-track { justify-content: flex-start; flex-direction: row; gap: 0; padding-bottom: 1rem; }
-  .pe-item { max-width: 120px; }
-  .timeline-year { font-size: 0.9rem; margin-bottom: 0.5rem; }
+  .pe-track { 
+    justify-content: flex-start; 
+    flex-direction: row; 
+    flex-wrap: nowrap; 
+    gap: 0; 
+    padding-bottom: 1.5rem; 
+    overflow-x: auto; 
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .pe-track::-webkit-scrollbar { display: none; }
+  .pe-item { max-width: 120px; flex-shrink: 0; }
 }
 
 @media (max-width: 480px) {
