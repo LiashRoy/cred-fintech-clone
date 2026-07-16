@@ -565,6 +565,10 @@ a { text-decoration: none; color: inherit; }
   font-size: 0.75rem;
   color: var(--text-muted);
   animation: fadeIn 1s 1s ease both;
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .scroll-arrow {
   width: 20px; height: 20px;
@@ -1572,41 +1576,44 @@ cite {
   }
   .profile-tooltip {
     top: 100%;
-    left: 50%;
+    left: 0;
     right: auto;
     margin-right: 0;
     margin-top: 15px;
-    transform: translateX(-50%) translateY(10px);
+    transform: translateY(10px);
+    width: 260px;
+    white-space: normal;
   }
   .profile-tooltip::before {
     top: -6px;
-    left: 50%;
+    left: 20px;
     right: auto;
     border-right: none;
     border-left: 1px solid var(--manna-dim);
-    transform: translateX(-50%) rotate(45deg);
+    transform: rotate(45deg);
   }
   .app-profile:hover .profile-tooltip {
-    transform: translateX(-50%) translateY(0);
+    transform: translateY(0);
   }
 
   .hero-stats-row { flex-direction: column; gap: 1.5rem; justify-content: center; align-items: center; width: 100%; }
   .hero-stat-divider { width: 80px; height: 1px; }
-  .hero-stat { flex-direction: column; gap: 0.5rem; justify-content: center; padding: 0; }
+  .hero-stat { flex-direction: column; gap: 0.5rem; justify-content: center; padding: 0; text-align: center; }
   
   .persona-row { grid-template-columns: 1fr; }
   .revenue-grid { grid-template-columns: 1fr; }
   .revenue-card-insight { grid-column: span 1; }
-  .financials-grid { grid-template-columns: repeat(2, 1fr); }
-  .scale-numbers-row { grid-template-columns: repeat(2, 1fr); }
-  .status-grid { grid-template-columns: 1fr; }
+  .financials-grid { grid-template-columns: 1fr; }
+  .scale-numbers-row { grid-template-columns: 1fr; }
+  .status-grid { grid-template-columns: 1fr !important; display: flex; flex-direction: column; }
   .status-card-insight { grid-column: span 1; }
   .bm-flow { flex-direction: column; }
   .bm-flow-arrow { transform: rotate(90deg); margin: 1rem 0; }
   .delta4-card { flex-direction: column; text-align: center; }
   .footer-inner { flex-direction: column; text-align: center; }
-  .pe-track { justify-content: flex-start; }
-  .timeline-item { grid-template-columns: 12px 60px 1fr; }
+  .pe-track { justify-content: flex-start; flex-direction: column; gap: 2rem; }
+  .timeline-item { grid-template-columns: 12px 1fr; gap: 1rem; }
+  .timeline-year { font-size: 0.9rem; margin-bottom: 0.5rem; }
 }
 
 @media (max-width: 480px) {
