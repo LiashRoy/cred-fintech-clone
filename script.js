@@ -81,6 +81,16 @@ window.addEventListener('scroll', () => {
     link.classList.remove('active');
     if (link.getAttribute('href') === '#' + currentSection) {
       link.classList.add('active');
+      
+      // Auto-scroll the nav container on mobile to keep active link centered
+      const navContainer = document.querySelector('.nav-links');
+      if (navContainer && navContainer.scrollWidth > navContainer.clientWidth) {
+        const scrollLeft = link.offsetLeft - (navContainer.clientWidth / 2) + (link.clientWidth / 2);
+        navContainer.scrollTo({
+          left: scrollLeft,
+          behavior: 'smooth'
+        });
+      }
     }
   });
 });
