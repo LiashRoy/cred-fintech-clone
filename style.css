@@ -400,10 +400,10 @@ a { text-decoration: none; color: inherit; }
 }
 
 .app-profile {
-  width: 40px;
-  height: 40px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
-  background: #222;
+  background: white url('https://upload.wikimedia.org/wikipedia/en/5/52/Great_Lakes_Institute_of_Management_Logo.png') center/contain no-repeat;
   border: 1px solid var(--border);
   position: relative;
   cursor: pointer;
