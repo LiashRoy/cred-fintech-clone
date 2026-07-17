@@ -403,7 +403,7 @@ a { text-decoration: none; color: inherit; }
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background: white url('https://upload.wikimedia.org/wikipedia/en/5/52/Great_Lakes_Institute_of_Management_Logo.png') center/contain no-repeat;
+  background: white url('great_lakes.png') center/contain no-repeat;
   border: 1px solid var(--border);
   position: relative;
   cursor: pointer;
