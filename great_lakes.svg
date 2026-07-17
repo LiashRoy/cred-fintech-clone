@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" fill="#ffffff" />
+  <!-- GREAT -->
+  <text x="100" y="60" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="900" fill="#002196" text-anchor="middle" letter-spacing="-1">GREAT</text>
+  <!-- LAKES -->
+  <text x="100" y="105" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="900" fill="#002196" text-anchor="middle" letter-spacing="-1">LAKES</text>
+  
+  <!-- Wave graphic -->
+  <path d="M 15,155 Q 50,125 100,155 Q 150,135 185,150 L 185,125 Q 140,110 100,120 Q 60,110 15,125 Z" fill="#00aef0" />
+  <path d="M 15,155 Q 50,125 90,145 L 95,120 Q 55,105 15,125 Z" fill="#69C21A" />
+  <path d="M 70,120 Q 110,150 145,130 Q 110,115 70,120 Z" fill="#ffffff" />
+
+  <!-- GURGAON -->
+  <text x="100" y="185" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="bold" fill="#002196" text-anchor="middle" letter-spacing="2">GURGAON</text>
+</svg>
