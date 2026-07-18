@@ -1084,6 +1084,12 @@ cite {
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.3s;
+  position: relative;
+}
+.bm-flow-item:hover {
+  transform: translateY(-5px);
 }
 .bm-flow-icon {
   padding: 1rem;
@@ -1093,6 +1099,36 @@ cite {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  transition: background 0.3s, border-color 0.3s;
+}
+.bm-flow-item.expanded .bm-flow-icon {
+  background: var(--bg-card);
+  border-color: var(--manna);
+}
+.bm-icon-plus {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 24px;
+  height: 24px;
+  background: var(--manna);
+  color: #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(212, 149, 0, 0.4);
+  transition: transform 0.3s ease, background 0.3s ease;
+  z-index: 2;
+}
+.bm-flow-item.expanded .bm-icon-plus {
+  transform: rotate(45deg);
+  background: var(--bg-card);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
 }
 .bm-svg {
   color: var(--manna);
@@ -1345,6 +1381,29 @@ cite {
   line-height: 1.4;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+}
+.bm-flow-label {
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-primary);
+}
+.bm-flow-detail {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease, margin-top 0.4s ease;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  text-align: center;
+  max-width: 250px;
+  line-height: 1.5;
+}
+.bm-flow-item.expanded .bm-flow-detail {
+  max-height: 150px;
+  opacity: 1;
+  margin-top: 0.5rem;
 }
 
 /* ===== STATUS TODAY ===== */
