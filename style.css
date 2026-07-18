@@ -1693,3 +1693,6 @@ cite {
 /* ===== SELECTION ===== */
 ::selection { background: var(--manna-dim); color: var(--manna); }
 
+
+.mobile-theme-btn { display: none; }
+@media (max-width: 768px) { .mobile-theme-btn { display: block !important; } }

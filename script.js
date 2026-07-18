@@ -279,22 +279,27 @@ console.log(
 
 // ─── 14. THEME TOGGLE ─────────────────────────────
 const themeToggleBtn = document.getElementById('theme-toggle');
-if (themeToggleBtn) {
+const themeToggleBtnMobile = document.getElementById('theme-toggle-mobile');
+const toggleBtns = [themeToggleBtn, themeToggleBtnMobile].filter(Boolean);
+
+if (toggleBtns.length > 0) {
   const currentTheme = localStorage.getItem('theme') || 'dark';
   if (currentTheme === 'light') {
-    themeToggleBtn.innerText = '🌙 Dark Mode';
+    toggleBtns.forEach(btn => btn.innerText = '🌙 Dark Mode');
   }
 
-  themeToggleBtn.addEventListener('click', () => {
-    let theme = document.documentElement.getAttribute('data-theme');
-    if (theme === 'light') {
-      document.documentElement.removeAttribute('data-theme');
-      localStorage.setItem('theme', 'dark');
-      themeToggleBtn.innerText = '☀️ Light Mode';
-    } else {
-      document.documentElement.setAttribute('data-theme', 'light');
-      localStorage.setItem('theme', 'light');
-      themeToggleBtn.innerText = '🌙 Dark Mode';
-    }
+  toggleBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      let theme = document.documentElement.getAttribute('data-theme');
+      if (theme === 'light') {
+        document.documentElement.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'dark');
+        toggleBtns.forEach(b => b.innerText = '☀️ Light Mode');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+        toggleBtns.forEach(b => b.innerText = '🌙 Dark Mode');
+      }
+    });
   });
 }
