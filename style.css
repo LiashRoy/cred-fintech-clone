@@ -308,6 +308,9 @@ a { text-decoration: none; color: inherit; }
 }
 
 .hero-logo-wrap-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
   margin-bottom: 1.5rem;
 }
 
@@ -1676,7 +1679,7 @@ cite {
 
   .hero { padding: 6rem 1.2rem 2rem; min-height: auto; }
   .hero-split { flex-direction: column; gap: 2rem; text-align: center; }
-  .hero-logo-wrap-left { display: flex; justify-content: center; }
+  .hero-logo-wrap-left { display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 1rem; }
   
   .hero-mockup-col {
     display: flex;
