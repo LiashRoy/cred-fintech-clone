@@ -1696,3 +1696,6 @@ cite {
 
 .mobile-theme-btn { display: none; }
 @media (max-width: 768px) { .mobile-theme-btn { display: block !important; } }
+
+.hero-eyebrow-container { display: flex; align-items: center; justify-content: center; gap: 1rem; margin-bottom: 1.5rem; }
+.hero-eyebrow-container .hero-eyebrow { margin-bottom: 0; }
