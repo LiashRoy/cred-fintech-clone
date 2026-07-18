@@ -276,3 +276,25 @@ console.log(
   'background:#FFCB45;color:#000;font-weight:bold;padding:4px 8px;border-radius:4px 0 0 4px;',
   'background:#121212;color:#FFCB45;font-weight:bold;padding:4px 8px;border-radius:0 4px 4px 0;border:1px solid #FFCB45;'
 );
+
+// ─── 14. THEME TOGGLE ─────────────────────────────
+const themeToggleBtn = document.getElementById('theme-toggle');
+if (themeToggleBtn) {
+  const currentTheme = localStorage.getItem('theme') || 'dark';
+  if (currentTheme === 'light') {
+    themeToggleBtn.innerText = '🌙 Dark Mode';
+  }
+
+  themeToggleBtn.addEventListener('click', () => {
+    let theme = document.documentElement.getAttribute('data-theme');
+    if (theme === 'light') {
+      document.documentElement.removeAttribute('data-theme');
+      localStorage.setItem('theme', 'dark');
+      themeToggleBtn.innerText = '☀️ Light Mode';
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light');
+      localStorage.setItem('theme', 'light');
+      themeToggleBtn.innerText = '🌙 Dark Mode';
+    }
+  });
+}
