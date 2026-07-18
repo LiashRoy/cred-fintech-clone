@@ -84,6 +84,11 @@
   --screen-bg: #ffffff;
   --app-card-bg: linear-gradient(135deg, #fafafa, #f0f0f0);
   --footer-logo-filter: invert(1);
+  --bg-tooltip: rgba(255, 255, 255, 0.95);
+  --border-tooltip: rgba(0, 0, 0, 0.1);
+  --btn-bg: #121212;
+  --btn-text: #ffffff;
+  --btn-shadow: rgba(0, 0, 0, 0.1);
 }
 
 /* ===== RESET ===== */
@@ -429,7 +434,7 @@ a { text-decoration: none; color: inherit; }
   width: 100%;
   height: 100%;
   border-radius: 32px;
-  background: #0d0d0d;
+  background: var(--screen-bg, #0d0d0d);
   padding: 2rem 1.5rem;
   display: flex;
   flex-direction: column;
@@ -460,8 +465,8 @@ a { text-decoration: none; color: inherit; }
   top: 50%;
   right: 100%;
   margin-right: 20px;
-  background: rgba(18, 18, 18, 0.95);
-  border: 1px solid var(--manna-dim);
+  background: var(--bg-tooltip, rgba(18, 18, 18, 0.95));
+  border: 1px solid var(--border-tooltip, rgba(255, 255, 255, 0.1));
   padding: 1.2rem;
   border-radius: var(--radius-md);
   box-shadow: 0 15px 40px rgba(0,0,0,0.8), 0 0 20px rgba(255, 203, 69, 0.1);
@@ -503,7 +508,7 @@ a { text-decoration: none; color: inherit; }
   letter-spacing: 0.05em;
   text-align: left;
   line-height: 1.4;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid var(--border-tooltip, rgba(255, 255, 255, 0.05));
   padding-bottom: 0.4rem;
 }
 .tooltip-name:last-child {
@@ -543,7 +548,7 @@ a { text-decoration: none; color: inherit; }
 .app-card-num {
   font-family: monospace;
   font-size: 1.1rem;
-  color: #fff;
+  color: var(--text-primary);
   letter-spacing: 2px;
   margin-bottom: 0.5rem;
 }
@@ -559,15 +564,15 @@ a { text-decoration: none; color: inherit; }
 }
 
 .app-btn {
-  background: #fff;
-  color: #000;
+  background: var(--btn-bg, #fff);
+  color: var(--btn-text, #000);
   font-weight: bold;
   padding: 1rem;
   border-radius: 30px;
   display: inline-block;
   width: 100%;
   cursor: pointer;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 20px var(--btn-shadow, rgba(255, 255, 255, 0.2));
 }
 
 .app-rewards {
