@@ -154,7 +154,7 @@ a { text-decoration: none; color: inherit; }
 }
 .nav-inner {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1440px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -235,7 +235,7 @@ a { text-decoration: none; color: inherit; }
   background: linear-gradient(180deg, transparent 0%, rgba(255, 203, 69, 0.02) 50%, transparent 100%);
 }
 .section-inner {
-  max-width: 1200px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 .section-header {
@@ -295,7 +295,7 @@ a { text-decoration: none; color: inherit; }
   position: relative;
   z-index: 2;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1440px;
 }
 
 .hero-split {
@@ -1590,7 +1590,7 @@ cite {
   background: rgba(9, 9, 9, 0.9);
 }
 .footer-inner {
-  max-width: 1200px;
+  max-width: 1440px;
   margin: 0 auto;
   display: flex;
   align-items: center;
